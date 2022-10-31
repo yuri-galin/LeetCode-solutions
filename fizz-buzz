@@ -1,0 +1,28 @@
+class Solution:
+    """
+    Given an integer n, return a string array answer (1-indexed) where:
+
+    answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
+    answer[i] == "Fizz" if i is divisible by 3.
+    answer[i] == "Buzz" if i is divisible by 5.
+    answer[i] == i (as a string) if none of the above conditions are true.
+    """
+    def fizzBuzz(self, n: int) -> List[str]:
+        # I feel like this doesn't really need explanation, but for the sake of it:
+        # We iterate over n integers and check whether or not each of them if divisible by 3, 5 or both.
+        # Then we add the corresponding value to the list.
+        i = 1
+        answer = []
+        while i <= n:
+            if i % 3 == 0:
+                value = "Fizz"
+                if i % 5 == 0:
+                    value += "Buzz"
+            elif i % 5 == 0:
+                value = "Buzz"
+            else:
+                value = str(i)
+            answer.append(value)
+            i += 1
+
+        return answer
