@@ -1,4 +1,7 @@
 class Solution:
+    """
+    Given a roman numeral, method romanToInt() converts it to an integer.
+    """
     def romanToInt(self, s: str) -> int:
         # As roman numerals use different letters for different orders of magnitude, you basically need to add up all the roman digits to convert
         # a roman numeral to integer.
